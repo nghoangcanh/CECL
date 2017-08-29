@@ -1,0 +1,80 @@
+---
+title: "CECL"
+file:	vecm.rmd
+author: Yusuf Saib
+date: "08/20/2017"
+output: html_document
+---
+
+<a href="javascript:history.back()">Go Back</a>
+
+##################################################### 
+# The optimal lag structure # 
+##################################################### 
+
+#### VarSelect result
+```{r, echo = FALSE}
+print(varModel)
+```
+
+##################################################### 
+# RESULT OF VECM MODEL # 
+##################################################### 
+
+#### 1. Conduct EIGEN test: ecdet=NONE -------- spec=TRANSITORY
+```{r, echo = FALSE}
+print(summary(vecm_ct_eigen_trans_none))
+```
+#### 2. Conduct EIGEN test: ecdet=CONST -------- spec=TRANSITORY
+```{r, echo = FALSE}
+print(summary(vecm_ct_eigen_trans_const))
+```
+
+#### 3. Conduct EIGEN test: ecdet=TREND -------- spec=TRANSITORY
+```{r, echo = FALSE}
+print(summary(vecm_ct_eigen_trans_trend))
+```
+
+#### 4. Conduct EIGEN test: ecdet=NONE -------- spec=LONGRUN
+```{r, echo = FALSE}
+print(summary(vecm_ct_eigen_lr_none))
+```
+#### 5. Conduct EIGEN test: ecdet=CONST -------- spec=LONGRUN
+```{r, echo = FALSE}
+print(summary(vecm_ct_eigen_lr_const))
+```
+
+#### 6. Conduct EIGEN test: ecdet=TREND -------- spec=LONGRUN
+```{r, echo = FALSE}
+print(summary(vecm_ct_eigen_lr_trend))
+```
+
+
+
+#### 7. Conduct Trace test: ecdet=NONE -------- spec=TRANSITORY
+```{r, echo = FALSE}
+print(summary(vecm_ct_trace_trans_none))
+```
+#### 8. Conduct Trace test: ecdet=CONST -------- spec=TRANSITORY
+```{r, echo = FALSE}
+print(summary(vecm_ct_trace_trans_const))
+```
+
+#### 9. Conduct Trace test: ecdet=TREND -------- spec=TRANSITORY
+```{r, echo = FALSE}
+print(summary(vecm_ct_trace_trans_trend))
+```
+
+#### 10. Conduct Trace test: ecdet=NONE -------- spec=LONGRUN
+```{r, echo = FALSE}
+print(summary(vecm_ct_trace_lr_none))
+```
+#### 11. Conduct Trace test: ecdet=CONST -------- spec=LONGRUN
+```{r, echo = FALSE}
+print(summary(vecm_ct_trace_lr_const))
+```
+
+#### 12. Conduct Trace test: ecdet=TREND -------- spec=LONGRUN
+```{r, echo = FALSE}
+print(summary(vecm_ct_trace_lr_trend))
+```

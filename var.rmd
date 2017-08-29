@@ -1,0 +1,27 @@
+---
+title: "VAR"
+file:	var.rmd
+author: Yusuf Saib
+date: "08/20/2017"
+output: html_document
+---
+
+<a href="javascript:history.back()">Go Back</a>
+
+##################################################### 
+# The optimal lag structure # 
+##################################################### 
+
+#### VarSelect result
+```{r, echo = FALSE}
+print(varModel4VAR)
+```
+
+##################################################### 
+# VAR Estimation Results: # 
+##################################################### 
+
+#### 1. VAR with K = varModel4VAR$selection[1] and type = c("const")
+```{r, echo = FALSE}
+print(summary(VAR_Const))
+```
